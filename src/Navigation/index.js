@@ -11,8 +11,7 @@ class AppWithState extends Component {
         const { navigationState, dispatch } = this.props;
         const addListener = createReduxBoundAddListener("root");
 
-        return <RootNavigation
-        />
+        return <RootNavigation />
 
     }
 }
