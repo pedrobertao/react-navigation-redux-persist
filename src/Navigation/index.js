@@ -4,15 +4,14 @@ import { connect } from 'react-redux';
 import { createReduxBoundAddListener } from 'react-navigation-redux-helpers';
 import LoginNavigation from './LoginNavigation';
 import MainNavigation from './MainNavigation';
+import RootNavigation from './RootNavigation';
 
-class RootNavigation extends Component {
+class AppWithState extends Component {
     render() {
         const { navigationState, dispatch } = this.props;
         const addListener = createReduxBoundAddListener("root");
 
-        return <LoginNavigation navigation={addNavigationHelpers({
-            dispatch, state: navigationState, addListener
-        })}
+        return <RootNavigation
         />
 
     }
@@ -25,4 +24,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(RootNavigation);
+export default connect(mapStateToProps)(AppWithState);

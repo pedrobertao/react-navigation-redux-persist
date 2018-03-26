@@ -1,10 +1,11 @@
-import LoginNavigation from '../../Navigation/LoginNavigation'
+import RootNavigation from '../../Navigation/RootNavigation'
 
 
-const initialState = LoginNavigation.router.getStateForAction(LoginNavigation.router.getActionForPathAndParams('Login'));
+const initialState = null;
 
+  
 const navigationReducer = (state = initialState, action) => {
-    const nextState = LoginNavigation.router.getStateForAction(action, state);
+    const nextState = RootNavigation.router.getStateForAction(action, state);
     return nextState || state;
 };
 

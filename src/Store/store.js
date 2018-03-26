@@ -19,7 +19,6 @@ const rootReducers = combineReducers({
 const persistConfig = {
     key: 'root',
     storage,
-    blaclist: ['login']
 }
 
 const reducerPersist = persistReducer(persistConfig, rootReducers);
