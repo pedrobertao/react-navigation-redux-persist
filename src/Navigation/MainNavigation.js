@@ -6,6 +6,7 @@ import UserInfo from '../Screens/UserInfo';
 const MainNavigation = StackNavigator({
     User: { screen: User },
     UserInfo: { screen: UserInfo },
+    Login: { screen: UserInfo },
 }, { initialRouteName: 'User', headerMode: 'none' });
 
 
